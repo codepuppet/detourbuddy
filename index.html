@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Detour Buddy is a lightweight iOS app that finds interesting nearby stops (scenic spots, coffee, quirky finds, bars, restaurants) based on your time budget — fast, curated, and private." />
+    <title>Detour Buddy — Quick Nearby Detours, Curated</title>
+
+    <style>
+        :root {
+            --bg: #0b0c10;
+            --card: #12141b;
+            --text: #e9ecf1;
+            --muted: #a7b0c0;
+            --accent: #7dd3fc;
+            --border: rgba(255, 255, 255, .08);
+            --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+            --radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: radial-gradient(1200px 800px at 20% 0%, rgba(125, 211, 252, .18), transparent 60%),
+                radial-gradient(900px 700px at 80% 20%, rgba(250, 204, 21, .12), transparent 55%),
+                var(--bg);
+            color: var(--text);
+            line-height: 1.55;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        header {
+            padding: 48px 18px 20px;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .brand {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: var(--shadow);
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid var(--border);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px
+        }
+
+        .subtitle {
+            margin-top: 10px;
+            color: var(--muted);
+            max-width: 70ch
+        }
+
+        nav {
+            margin-top: 16px;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        main {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 18px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: 16px;
+        }
+
+        @media (max-width:860px) {
+            .grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .card {
+            background: rgba(18, 20, 27, .88);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 18px;
+        }
+
+        h2 {
+            margin: 0 0 10px;
+            font-size: 18px
+        }
+
+        ul {
+            margin-left: 20px
+        }
+
+        ol {
+            margin-left: 22px
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 6px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            font-size: 12px;
+            margin: 6px 6px 0 0;
+            color: var(--muted);
+        }
+
+        .ctaRow {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 14px;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 10px 14px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid var(--border);
+            color: var(--text);
+            display: inline-block;
+        }
+
+        .hr {
+            height: 1px;
+            background: var(--border);
+            margin: 16px 0;
+            border: 0;
+        }
+
+        .note {
+            color: var(--muted);
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
+        .kicker {
+            color: var(--muted);
+            font-size: 13px;
+            margin: 2px 0 12px;
+        }
+
+        .callout {
+            margin-top: 12px;
+            padding: 10px 12px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: rgba(255, 255, 255, .04);
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        footer {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 20px 18px 40px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .small {
+            font-size: 12px;
+            color: var(--muted);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="brand">
+            <!-- Replace with your icon file (e.g., detourbuddy-icon.png) -->
+            <img src="det-icon.png" alt="Detour Buddy app icon" class="logo" />
+            <div>
+                <h1>Detour Buddy</h1>
+                <div class="subtitle">
+                    Quick nearby detours for when you have <strong>10–30 minutes</strong> and want something better than
+                    “just drive home.”
+                    Pick a vibe, choose your time budget, and Detour Buddy finds <strong>interesting stops near
+                        you</strong> —
+                    fast, curated, and private.
+                </div>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#howto">How to Use</a>
+            <a href="#freepremium">Free vs Pro</a>
+            <a href="#privacy">Privacy</a>
+            <a href="#support">Support</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </nav>
+    </header>
+
+    <main class="grid">
+
+        <section class="card" id="features">
+            <h2>What Detour Buddy does</h2>
+            <p>
+                Detour Buddy finds <strong>things worth stopping for</strong> near your current location.
+                It’s designed for real life: you’re already out, you have a little time, and you want a quick win.
+            </p>
+            <p class="kicker">
+                No accounts. No feeds. No “plan a whole day.” Just fast, nearby discovery.
+            </p>
+
+            <div>
+                <span class="pill">Near-me detours</span>
+                <span class="pill">Time-budget based</span>
+                <span class="pill">Curated ranking</span>
+                <span class="pill">Apple Maps launch</span>
+                <span class="pill">Private by default</span>
+            </div>
+
+            <hr class="hr" />
+
+            <h2>Core experience</h2>
+            <ul>
+                <li><strong>Pick a vibe:</strong> Scenic, Coffee, Quirky, Bars, Restaurants (availability depends on
+                    Pro).</li>
+                <li><strong>Choose a time budget:</strong> e.g., 10 / 15 / 30 minutes.</li>
+                <li><strong>Get a clean list:</strong> Detour Buddy ranks nearby options with short “why” lines.</li>
+                <li><strong>Open instantly:</strong> One tap launches Apple Maps for directions.</li>
+                <li><strong>Optional research:</strong> Open a place in Safari or run a quick web search.</li>
+            </ul>
+
+            <h2 style="margin-top:18px;">Why the results feel curated</h2>
+            <p class="subtitle">
+                Detour Buddy doesn’t just dump map results.
+                It applies lightweight heuristics to reduce “meh” results and keep the list useful.
+            </p>
+            <ul>
+                <li><strong>Variety:</strong> Avoids flooding the list with the same type of place.</li>
+                <li><strong>Quality signals:</strong> For food/drink, downranks obvious chains and low-signal retail.
+                </li>
+                <li><strong>Two modes:</strong> “Anything” is broad; “Best” is stricter (Pro).</li>
+            </ul>
+
+            <div class="ctaRow">
+                <a href="YOUR_APP_STORE_LINK" aria-label="Download Detour Buddy on the App Store">
+                    <img src="appstore.svg" alt="Download on the App Store" style="
+                height: 44px;
+                width: auto;
+                display: block;
+              " />
+                </a>
+
+                <a class="btn" href="privacy.html">Read the Privacy Policy</a>
+            </div>
+
+            <p class="note">
+                Tip: If you’re in a sparse area, switch to <strong>Anything</strong> mode to broaden results.
+            </p>
+        </section>
+
+        <aside class="card" id="howto">
+            <h2>Quick Start</h2>
+            <ol>
+                <li>Open Detour Buddy and allow <strong>Location</strong> while using the app.</li>
+                <li>Choose your <strong>vibe</strong> (Scenic is always available).</li>
+                <li>Set your <strong>time budget</strong> (how far you’re willing to go).</li>
+                <li>Tap <strong>Find detours</strong>.</li>
+                <li>Tap <strong>Maps</strong> for directions, or <strong>Web/Search</strong> to learn more.</li>
+            </ol>
+
+            <div class="callout">
+                <strong>Pro tip:</strong> Use Scenic for quick “reset” stops — viewpoints, parks, overlooks —
+                the kind of detour that feels like you got more out of the day.
+            </div>
+
+            <h2 id="freepremium" style="margin-top:18px;">Free vs Pro</h2>
+            <p>
+                Detour Buddy is free for quick scenic detours.
+                Pro unlocks additional vibes, saving, and higher-quality curation controls.
+            </p>
+
+            <ul>
+                <li><strong>Free:</strong> Scenic vibe, “Anything” quality mode, open in Maps / Web / Search.</li>
+                <li><strong>Pro:</strong> All vibes, “Best” quality mode, save places and add notes.</li>
+            </ul>
+
+            <p class="subtitle" style="margin-top:12px;">
+                <strong>Important:</strong> In the free version, other vibes are visible but <strong>disabled</strong>.
+                Saving is also <strong>disabled</strong> (buttons remain visible but won’t activate).
+            </p>
+
+            <h2 style="margin-top:18px;">What Pro includes</h2>
+            <ul>
+                <li><strong>More vibes:</strong> Coffee, Quirky, Bars, Restaurants.</li>
+                <li><strong>Best mode:</strong> Stricter filtering + better ranking for higher-quality picks.</li>
+                <li><strong>Saved places:</strong> Bookmark detours you want to revisit.</li>
+                <li><strong>Notes:</strong> Add quick notes (with undo + counter) so you remember why you saved it.</li>
+            </ul>
+
+            <h2 id="privacy" style="margin-top:18px;">Privacy</h2>
+            <p>
+                Detour Buddy uses your location to find nearby places.
+                It does not require an account and does not include social features.
+            </p>
+            <p class="note">
+                For full details, see the <a href="privacy.html">Privacy Policy</a>.
+            </p>
+
+            <h2 id="support" style="margin-top:18px;">Support</h2>
+            <p>
+                Questions, feedback, or feature requests?
+                <a href="mailto:codepuppet@hotmail.com">codepuppet@hotmail.com</a>
+            </p>
+
+            <p class="note">
+                Want to suggest better filters (e.g., local chain exceptions) or a vibe tweak? Email is the fastest way
+                to reach
+                us.
+            </p>
+
+            <hr class="hr" />
+
+            <div class="small">
+                <strong>Attribution:</strong> Detour Buddy uses Apple MapKit to search for nearby places.
+                Place data quality may vary by region.
+            </div>
+        </aside>
+
+    </main>
+
+    <footer>
+        © <span id="year"></span> Detour Buddy ·
+        <a href="privacy.html">Privacy Policy</a>
+
+        <script>
+            document.getElementById( "year" ).textContent = new Date().getFullYear();
+        </script>
+    </footer>
+
+</body>
+
+</html>
