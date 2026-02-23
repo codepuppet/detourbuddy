@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description"
         content="Detour Buddy is a lightweight iOS app that finds interesting nearby stops (scenic spots, coffee, quirky finds, bars, restaurants) based on your time budget — fast, curated, and private." />
-    <title>Detour Buddy — Quick Nearby Detours, Curated</title>
+    <title>Detour Buddy — Quick Nearby Detours, Curated, with Time Budget</title>
 
     <style>
         :root {
@@ -192,6 +192,12 @@
             color: var(--muted);
         }
     </style>
+    <meta property="og:title" content="Detour Buddy — Quick Nearby Detours, Curated, with Time Budget" />
+    <meta property="og:description"
+        content="Pick a vibe, choose your time budget, and find interesting stops near you — fast, curated, and private. Driving and walking modes with ETA refinement." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="det-icon.png" />
+    <meta name="twitter:card" content="summary" />
 </head>
 
 <body>
@@ -204,10 +210,9 @@
                 <h1>Detour Buddy</h1>
                 <div class="subtitle">
                     Quick nearby detours for when you have <strong>10–30 minutes</strong> and want something better than
-                    “just drive home.”
-                    Pick a vibe, choose your time budget, and Detour Buddy finds <strong>interesting stops near
-                        you</strong> —
-                    fast, curated, and private.
+                    “just drive home.” Pick a vibe, choose your time budget, and Detour Buddy finds <strong>interesting
+                        stops near you</strong> — fast, curated, and private. Supports <strong>driving or
+                        walking</strong>, with smart ETA estimates refined by Apple Maps.
                 </div>
             </div>
         </div>
@@ -230,13 +235,21 @@
                 Detour Buddy finds <strong>things worth stopping for</strong> near your current location.
                 It’s designed for real life: you’re already out, you have a little time, and you want a quick win.
             </p>
+            <ul>
+                <li>Near-me search with <strong>driving</strong> or <strong>walking</strong> modes.</li>
+                <li><strong>Time budget</strong> controls to find realistic detours.</li>
+                <li><strong>ETA estimates</strong> refined with Apple Maps for top results.</li>
+                <li>Curated filters to reduce obvious chains and low-signal results.</li>
+            </ul>
             <p class="kicker">
                 No accounts. No feeds. No “plan a whole day.” Just fast, nearby discovery.
             </p>
 
             <div>
                 <span class="pill">Near-me detours</span>
+                <span class="pill">Driving & Walking</span>
                 <span class="pill">Time-budget based</span>
+                <span class="pill">ETA refinement</span>
                 <span class="pill">Curated ranking</span>
                 <span class="pill">Apple Maps launch</span>
                 <span class="pill">Private by default</span>
@@ -252,6 +265,10 @@
                 <li><strong>Get a clean list:</strong> Detour Buddy ranks nearby options with short “why” lines.</li>
                 <li><strong>Open instantly:</strong> One tap launches Apple Maps for directions.</li>
                 <li><strong>Optional research:</strong> Open a place in Safari or run a quick web search.</li>
+                <li><strong>Driving or walking:</strong> Pick your mode for more realistic results.</li>
+                <li><strong>ETA-aware results:</strong> Detours are filtered to fit your time budget.</li>
+                <li><strong>Smart ETA estimates:</strong> We estimate ETAs for all results and refine the top picks
+                    using Apple Maps.</li>
             </ul>
 
             <h2 style="margin-top:18px;">Why the results feel curated</h2>
@@ -263,11 +280,13 @@
                 <li><strong>Variety:</strong> Avoids flooding the list with the same type of place.</li>
                 <li><strong>Quality signals:</strong> For food/drink, downranks obvious chains and low-signal retail.
                 </li>
-                <li><strong>Two modes:</strong> “Anything” is broad; “Best” is stricter (Pro).</li>
+                <li><strong>Two modes:</strong> “Anything” is broad; “Best” is stricter and can relax filters when
+                    results are sparse (Pro).</li>
             </ul>
 
             <div class="ctaRow">
-                <a href="https://apps.apple.com/us/app/detour-buddy/id6757689187" aria-label="Download Detour Buddy on the App Store">
+                <a href="https://apps.apple.com/us/app/detour-buddy/id6757689187"
+                    aria-label="Download Detour Buddy on the App Store">
                     <img src="appstore.svg" alt="Download on the App Store" style="
                 height: 44px;
                 width: auto;
@@ -288,8 +307,10 @@
             <ol>
                 <li>Open Detour Buddy and allow <strong>Location</strong> while using the app.</li>
                 <li>Choose your <strong>vibe</strong> (Scenic is always available).</li>
+                <li>Choose <strong>driving</strong> or <strong>walking</strong>.</li>
                 <li>Set your <strong>time budget</strong> (how far you’re willing to go).</li>
                 <li>Tap <strong>Find detours</strong>.</li>
+                <li>ETAs are estimated immediately and refined for top results.</li>
                 <li>Tap <strong>Maps</strong> for directions, or <strong>Web/Search</strong> to learn more.</li>
             </ol>
 
@@ -316,7 +337,8 @@
 
             <h2 style="margin-top:18px;">What Pro includes</h2>
             <ul>
-                <li><strong>More vibes:</strong> Coffee, Quirky, Bars, Restaurants.</li>
+                <li><strong>More vibes:</strong> Coffee, Quirky, Bars, Restaurants, Parks, EV Charging, Rest Areas, and
+                    more.</li>
                 <li><strong>Best mode:</strong> Stricter filtering + better ranking for higher-quality picks.</li>
                 <li><strong>Saved places:</strong> Bookmark detours you want to revisit.</li>
                 <li><strong>Notes:</strong> Add quick notes (with undo + counter) so you remember why you saved it.</li>
@@ -326,6 +348,9 @@
             <p>
                 Detour Buddy uses your location to find nearby places.
                 It does not require an account and does not include social features.
+            </p>
+            <p class="note">
+                Detour Buddy does not collect your search history or store your exact location on a server.
             </p>
             <p class="note">
                 For full details, see the <a href="privacy.html">Privacy Policy</a>.
@@ -342,6 +367,9 @@
                 to reach
                 us.
             </p>
+            <p class="note">
+                Have feedback on ETA accuracy or vibe curation? We’d love to hear it.
+            </p>
 
             <hr class="hr" />
 
@@ -349,8 +377,20 @@
                 <strong>Attribution:</strong> Detour Buddy uses Apple MapKit to search for nearby places.
                 Place data quality may vary by region.
             </div>
+            <div class="small">
+                ETAs are estimates and can vary based on traffic and conditions.
+            </div>
         </aside>
 
+        <section class="card" id="whatsnew">
+            <h2>What’s New</h2>
+            <ul>
+                <li><strong>Walking mode:</strong> Find realistic detours for quick walks.</li>
+                <li><strong>Smarter ETAs:</strong> We estimate ETAs for all results and refine the top picks using Apple
+                    Maps.</li>
+                <li><strong>Improved curation:</strong> Better filters for food/drink to reduce obvious chains.</li>
+            </ul>
+        </section>
     </main>
 
     <footer>
